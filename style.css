@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;700&display=swap');
+
+:root {
+    --bpurp-light: #8351E8;
+    --bpurp-med: #673FB5;
+    --bpurp-dark: #3B2569;
+
+    --pastel-light: #9475EB;
+    --pastel-blue-light: #6F93F6;
+    --pastel-purple-light: #9E5FD4;
+    --pastel-med: #6849AB;
+    --pastel-dark: #412E6B;
+
+    --bblue-light: #C3D8F4;
+    --bblue-med: #5769D4;
+
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+    --album-radius: 0.4rem;
+
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: 0;
+    list-style: none;
+    border: none;
+}
+
+body {
+    font-family: "Mukta", sans-serif;
+    color: var(--bpurp-dark);
+    background: var(--bblue-light);
+    overflow-x: hidden;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* IMAGES */
+
+.profile-photo {
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--bpurp-dark);
+    color: white;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.text-muted {
+    color: #2D4A4A;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    width: 100%;
+    background: white;
+    padding: 0.7rem 4rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-left: 2rem;
+    
+}
+
+nav .search-bar {
+    
+    background: var(--bblue-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"] {
+    background: transparent;
+    width: 30vmin;
+}
+
+nav .search-bar input[type="search"]::placeholder {
+    color: gray;
+}
+
+nav .create {
+    display: flex;
+    align-items: center;
+    gap:  2rem;
+}
+
+.log {
+    font-style:italic;
+    
+}
+
+/* MAIN */
+
+main {
+    position: relative;
+    top: 5.5rem;
+}
+
+main .container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative;
+    column-gap: 1.7rem;
+}
+
+/* LEFT WINDOW */
+
+main .container .left-window {
+    flex: 1;
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+main .container .left-window .profile {
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    align-items: center;
+    display: flex;
+    background: var(--pastel-light);
+    column-gap: .5rem;
+}
+
+main .container .left-window .profile-photo {
+    border-radius: 20%;
+    
+    width: 4rem;
+}
+
+/* LEFT SIDEBAR */
+main .container .left-window .sidebar {
+    margin-top: 1rem;
+    background-color: var(--pastel-med);
+    border-radius: var(--card-border-radius);
+    color: var(--bblue-light);
+}
+
+main .container .left-window .sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+main .container .left-window .sidebar i {
+    font-size: 1.4rem;
+    margin-left: .6rem;
+    position: relative;
+}
+
+main .container .left-window .sidebar .menu-item:hover {
+    background-color: var(--pastel-dark);
+    border-radius: var(--card-border-radius);
+}
+
+main .container .left-window .btn-primary {
+    display: flex;
+    align-items: center;
+    padding: var(--card-padding);
+}
+
+/* PLAYLISTS */
+main .container .left-window .playlist-photo {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    border-radius: var(--album-radius);
+    overflow: hidden;
+}
+
+/* RIGHT WINDOW */
+
+main .container .right-window {
+    flex: 1;
+}
+
+/* CENTER WINDOW */
+
+main .container .center-window {
+    flex: 3;
+}
