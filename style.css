@@ -86,10 +86,6 @@ img {
     font-weight: 500;
 }
 
-.text-muted {
-    color: #2D4A4A;
-}
-
 /* NAVIGATION BAR */
 
 nav {
@@ -167,12 +163,19 @@ main .container .left-window .profile {
     display: flex;
     background: var(--pastel-light);
     column-gap: .5rem;
+    border: .34rem solid var(--bpurp-dark);
+    
 }
 
 main .container .left-window .profile-photo {
     border-radius: 20%;
+    border-color: var(--bpurp-dark);
     
     width: 4rem;
+}
+
+.container .left-window .handle .text-muted {
+    color: var(--bblue-light);
 }
 
 /* LEFT SIDEBAR */
@@ -188,7 +191,12 @@ main .container .left-window .sidebar .menu-item {
     align-items: center;
     height: 4rem;
     cursor: pointer;
-    transition: 300ms ease;
+    transition: 200ms ease;
+}
+
+main .container .left-window .sidebar .menu-item:hover {
+    background-color: var(--bpurp-dark);
+    border-radius: var(--card-border-radius);
 }
 
 main .container .left-window .sidebar i {
@@ -197,23 +205,98 @@ main .container .left-window .sidebar i {
     position: relative;
 }
 
-main .container .left-window .sidebar .menu-item:hover {
-    background-color: var(--pastel-dark);
-    border-radius: var(--card-border-radius);
-}
-
 main .container .left-window .btn-primary {
     display: flex;
     align-items: center;
     padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--bblue-light);
+}
+
+.left-window .sidebar h3 {
+    margin-left: .3rem;
+    font-size: 1.4rem;
+}
+
+.left-window .sidebar .active {
+    background: var(--bpurp-dark);
+    border-radius: var(--card-border-radius);
+}
+
+.left-window .sidebar .active::before {
+    content: "";
+    display: block;
+    margin-left: .15rem;
+    width: 0.3rem;
+    background: var(--bpurp-light);
+    position: absolute;
+    height: 2rem;
+    border-radius: 10rem;
 }
 
 /* PLAYLISTS */
-main .container .left-window .playlist-photo {
+
+.left-window .playlist-popup {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 7.7rem;
+    bottom: 5.5rem;
+    left: 103%;
+    width: 10rem;
+    background-color: var(--pastel-light);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    border: .34rem solid var(--bpurp-dark);
+    box-shadow: 0 0 .2rem var(--pastel-dark);
+    
+}
+
+
+.left-window .playlist-pin {
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    top: 17.2rem;
+    left: 16rem;
+    display: block;
+    background-color: var(--bpurp-dark);
+    margin-left: -1.8rem;
+    transform: rotate(45deg);
+    overflow: hidden;
+    border-radius: .2rem;
+}
+
+.left-window .playlist-popup {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .5rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.left-window .playlist-photo {
     width: 5rem;
     aspect-ratio: 1/1;
     border-radius: var(--album-radius);
-    overflow: hidden;
+}
+
+.left-window .playlists {
+    color: var(--bblue-light);
+}
+
+.left-window .playlist-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-window .playlist-name .text-muted {
+    color: var(--bpurp-dark);
 }
 
 /* RIGHT WINDOW */
