@@ -18,7 +18,7 @@ function TrackHub() {
       {tracks.map( (track) => <Track name={track}/> )}
 
       <div>
-        <AddMediaButton icon={<AiFillPlusCircle className='add-track-button' size='1.6rem'/>}/>
+        <AddMediaButton icon={<AiFillPlusCircle className='add-track-button' size='1.6rem' type='mp3/wav' handleFunc={addTrack}/>}/>
       </div>
       
     </div>

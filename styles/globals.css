@@ -67,6 +67,11 @@ body {
 .track-hub .add-track-button {
   color: var(--light-mdpurp);
   width: auto;
+  cursor: pointer;
+}
+
+.track-hub .add-track-button:hover {
+  opacity: .8;
 }
 
 
