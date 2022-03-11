@@ -51,19 +51,26 @@ body {
 
 .container .center-window {
   flex: 7;
+  padding: 1%;
 }
 
-.container .left-window {
-  flex: 3;
-  background-color: red;
+/* Tracks */
+
+.track-hub {
+  background-color: var(--light-dpurp);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.8rem;
+  height: 100%;
 }
 
-.container .right-window {
-  flex: 3;
-  background-color: purple;
+.track-hub .add-track-button {
+  color: var(--light-mdpurp);
+  width: auto;
 }
 
-.center-window .track {
+
+.track {
   /* Text */
   display: flex;
   justify-content: center;
@@ -79,7 +86,30 @@ body {
   width: auto;
 }
 
-.center-window .master-track {
+.master-track {
   /* Box */
   background-color: var(--light-mdpurp);
+}
+
+/* Left Window */
+
+.container .left-window {
+  flex: 3;
+  background-color: red;
+}
+
+/* Right Window */
+
+.container .right-window {
+  flex: 3;
+  background-color: purple;
+}
+
+
+/* Util */
+
+.add-media-button {
+  display: flex;
+  justify-content: center;
+  padding: .25rem;
 }

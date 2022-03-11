@@ -1,11 +1,28 @@
-import React, { Component } from 'react'
+import React from 'react'
+import MasterTrack from '../tracks/MasterTrack'
+import Track from '../tracks/Track'
+import {AiFillPlusCircle} from 'react-icons/ai';
+import AddMediaButton from '../util/AddMediaButton';
 
-export class TrackHub extends Component {
-  render() {
-    return (
-      <div>TrackHub</div>
-    )
+function TrackHub() {
+  const tracks = []
+  
+  const addTrack = (track) => {
+    tracks.push(track);
   }
+
+  return (
+    <div className='track-hub'>
+      
+      <MasterTrack />
+      {tracks.map( (track) => <Track name={track}/> )}
+
+      <div>
+        <AddMediaButton icon={<AiFillPlusCircle className='add-track-button' size='1.6rem'/>}/>
+      </div>
+      
+    </div>
+  )
 }
 
 export default TrackHub
