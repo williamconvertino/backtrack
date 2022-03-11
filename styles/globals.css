@@ -2,19 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
-  box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+:root {
+  --light-mpurp: #9A6CE6;
+  --light-dpurp: #453066;
+  --light-lblue: #C3D8F4;
+  --light-ppurp: #C9B4EA;
+  --light-mdpurp: #7B43B3;
+}
+
+.container {
+  overflow-y: scroll;
+  display: flex;
+}
+
+.background {
+  background: var(--light-lblue);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+
+
+.header {
+  display: flex;
+  background: white;
+  height: 1.8rem;
+}
+
+/* Center Window */
+
+.container .center-window {
+  flex: 7;
+}
+
+.container .left-window {
+  flex: 3;
+  background-color: red;
+}
+
+.container .right-window {
+  flex: 3;
+  background-color: purple;
+}
+
+.center-window .track {
+  /* Text */
+  display: flex;
+  justify-content: center;
+  padding-top: .5rem;
+
+  /* Box */
+  background-color: var(--light-mpurp);
+  margin-top: 4%;
+  border-radius: .7rem;
+  height: 2.7rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: auto;
+}
+
+.center-window .master-track {
+  /* Box */
+  background-color: var(--light-mdpurp);
 }
