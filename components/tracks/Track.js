@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Track() {
+function Track({name}) {
   return (
     <div className='track'>
-        Track
+        {name}
     </div>
   )
 }

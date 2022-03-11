@@ -9,6 +9,7 @@ import RightWindow from '../components/windows/RightWindow'
 export default function Home() {
   return (
     <div>
+
       <Head>
         <title>BackTrack</title>
         <meta name="" content="" />
@@ -16,13 +17,14 @@ export default function Home() {
       </Head>
 
       <Header />
+      
 
-      <main className='container background'>
+      <main className='container'>
         <LeftWindow />
         <CenterWindow/>
         <RightWindow />
       </main>
-
+    
     
     </div>
   )
