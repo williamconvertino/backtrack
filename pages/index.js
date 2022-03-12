@@ -12,8 +12,8 @@ export default function Home() {
 
       <Head>
         <title>BackTrack</title>
-        <meta name="" content="" />
-        <link rel="icon" href="/logo.png" />
+        <meta name="BackTrack" content="A music sharing social media site." />
+        <link rel="icon" href="/logo_text.png" />
       </Head>
 
       <Header />
