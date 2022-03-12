@@ -1,6 +1,4 @@
 import React, {useRef} from 'react'
-import PropTypes from 'react'
-import {useState} from 'react'
 
 function AddMediaButton({icon, processFunc}) {
   

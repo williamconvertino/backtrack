@@ -18,12 +18,10 @@ import { async } from '@firebase/util';
 
 function TrackHub() {
 
-  const [tracks, setTracks] = useState([]);
+  // const [tracks, setTracks] = useState([]);
   
   const createTrack = (e) => {
-    for (let i = 0; i < e.length; i++) {
-      setTracks([...tracks, <Track title={e[i].name} />] );
-    }
+    //setTracks( [...tracks, <Track title={e[0].name} />] );
   }
 
   return (
@@ -31,8 +29,8 @@ function TrackHub() {
       
       <MasterTrack />
       
-      {tracks}
-      
+      {/* {tracks} */}
+
       <AddMediaButton processFunc={createTrack} icon={<AiFillPlusCircle className='add-track-button'size={20}/>} />
 
 

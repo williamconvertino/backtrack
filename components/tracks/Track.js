@@ -8,8 +8,9 @@ function Track({title}) {
   )
 }
 
+
 Track.defaultProps = {
-  title: 'Master Track',
+  title: 'Track',
 };
 
 export default Track
