@@ -74,7 +74,6 @@ body {
   opacity: .8;
 }
 
-
 .track {
   /* Text */
   display: flex;
@@ -100,14 +99,15 @@ body {
 
 .container .left-window {
   flex: 3;
-  background-color: red;
+  /* background-color: red; */
+  
 }
 
 /* Right Window */
 
 .container .right-window {
   flex: 3;
-  background-color: purple;
+  /* background-color: purple; */
 }
 
 

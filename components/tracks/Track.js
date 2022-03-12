@@ -1,11 +1,15 @@
 import React from 'react'
 
-function Track({name}) {
+function Track({title}) {
   return (
     <div className='track'>
-        {name}
+        {title}
     </div>
   )
 }
+
+Track.defaultProps = {
+  title: 'Master Track',
+};
 
 export default Track

@@ -1,16 +1,21 @@
 import React, {useRef} from 'react'
+import PropTypes from 'react'
+import {useState} from 'react'
 
-function AddMediaButton({icon, type, handleFunc}) {
+function AddMediaButton({icon, processFunc}) {
   
-  const filePickerRef = useRef(null);
-  
+  const filePickerRef = useRef();
+
+  const handleFiles = (e) => {
+    processFunc(e.target.files); 
+  }
+
   return (
     <div className='add-media-button' onClick={() => filePickerRef.current.click()}>
         {icon}
-        <input hidden type="file" accept={type} onChange={handleFunc} ref={filePickerRef} />
+        <input hidden multiple type="file" onChange={handleFiles} ref={filePickerRef} />
     </div>
   )
-
 }
 
 export default AddMediaButton
