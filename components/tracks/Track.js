@@ -8,9 +8,4 @@ function Track({title}) {
   )
 }
 
-
-Track.defaultProps = {
-  title: 'Track',
-};
-
 export default Track
