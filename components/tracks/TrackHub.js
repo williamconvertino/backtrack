@@ -20,8 +20,8 @@ function TrackHub() {
 
   const [tracks, setTracks] = useState([]);
   
-  const createTrack = (e) => {
-    setTracks( [...tracks, <li key={e[0].name}><Track title={e[0].name} /></li>] );
+  const createTrack = (fileList) => {
+    setTracks( [...tracks, <li key={fileList[0].name}><Track title={fileList[0].name} file={fileList[0]} /></li>] );
   }
 
   return (
