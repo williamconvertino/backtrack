@@ -17,11 +17,11 @@ import AddTrackButton from '../util/AddTrackButton';
 
 function TrackHub() {
 
-  const [tracks, setTracks] = useState([]);
+  const [songFiles, setSongFiles] = useState([]);
   
   const createTrack = (fileList) => {
     
-    setTracks(tracks => [...tracks, ...fileList] );
+    setSongFiles(songFiles => [...songFiles, ...fileList] );
   }
 
   return (
@@ -29,7 +29,7 @@ function TrackHub() {
       
       <MasterTrack />
       
-      {tracks.map(track => <Track title={track.name} />)}
+      {songFiles.map(file => <Track title={file.name} songFile={file}/>)}
 
       <AddTrackButton processFunc={createTrack} />
 

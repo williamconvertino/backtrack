@@ -3,7 +3,7 @@ import React from 'react'
 function MasterTrack({title}) {
   return (
     <div className='track master-track'>
-      {title}
+      <div className='track-title'>{title}</div>
     </div>
   )
 }

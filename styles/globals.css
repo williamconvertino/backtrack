@@ -77,12 +77,13 @@ body {
   opacity: .8;
 }
 
+.master-track {
+  /* Box */
+  background-color: var(--light-mdpurp);
+}
+
 .track {
-  /* Text */
   display: flex;
-  justify-content: center;
-  padding-top: 1%;
-  font-size: 2rem;
   /* Box */
   background-color: var(--light-mpurp);
   border-radius: .7rem;
@@ -91,11 +92,26 @@ body {
   margin-right: 1rem;
   margin-bottom: 1rem;
   width: auto;
+  overflow: hidden;
 }
 
-.master-track {
-  /* Box */
-  background-color: var(--light-mdpurp);
+.track .track-title {
+  /* Text */
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+  font-size: 2rem;
+}
+
+.track .play-pause-button-window {
+  
+  background-color: var(--light-lblue);
+  width: 10%;
+  height: auto;
+}
+
+.track .play-pause-button:hover {
+  opacity: 60%;
 }
 
 /* Left Window */
