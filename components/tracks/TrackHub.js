@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import MasterTrack from '../tracks/MasterTrack'
 import Track from '../tracks/Track'
-import {AiFillPlusCircle} from 'react-icons/ai';
-import AddMediaButton from '../util/AddMediaButton';
 
 import { db, storage } from "../../firebase";
 import {
@@ -14,6 +12,7 @@ import {
 } from "@firebase/firestore";
 import { getDownloadURL, ref, uploadString } from "@firebase/storage";
 import { async } from '@firebase/util';
+import AddTrackButton from '../util/AddTrackButton';
 
 
 function TrackHub() {
@@ -21,7 +20,8 @@ function TrackHub() {
   const [tracks, setTracks] = useState([]);
   
   const createTrack = (fileList) => {
-    setTracks( [...tracks, <li key={fileList[0].name}><Track title={fileList[0].name} file={fileList[0]} /></li>] );
+    
+    setTracks(tracks => [...tracks, ...fileList] );
   }
 
   return (
@@ -29,9 +29,9 @@ function TrackHub() {
       
       <MasterTrack />
       
-      {tracks}
+      {tracks.map(track => <Track title={track.name} />)}
 
-      <AddMediaButton processFunc={createTrack} icon={<AiFillPlusCircle className='add-track-button'size={20}/>} />
+      <AddTrackButton processFunc={createTrack} />
 
 
     </div>
