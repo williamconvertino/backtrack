@@ -20,7 +20,6 @@ function TrackHub() {
   const [songFiles, setSongFiles] = useState([]);
   
   const createTrack = (fileList) => {
-    
     setSongFiles(songFiles => [...songFiles, ...fileList] );
   }
 
@@ -32,7 +31,6 @@ function TrackHub() {
       {songFiles.map(file => <Track title={file.name} songFile={file}/>)}
 
       <AddTrackButton processFunc={createTrack} />
-
 
     </div>
   )

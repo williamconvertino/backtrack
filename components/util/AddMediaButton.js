@@ -1,6 +1,6 @@
 import React, {useRef} from 'react'
 
-function AddMediaButton({icon, processFunc, type, multiple}) {
+function AddMediaButton({icon, processFunc, accept, multiple}) {
   
   const filePickerRef = useRef();
 
@@ -11,7 +11,7 @@ function AddMediaButton({icon, processFunc, type, multiple}) {
   return (
     <div className='add-media-button' onClick={() => filePickerRef.current.click()}>
         {icon}
-        <input hidden multiple={multiple} accept={type} type="file" onChange={handleFiles} ref={filePickerRef} />
+        <input hidden multiple={multiple} accept={accept} type="file" onChange={handleFiles} ref={filePickerRef} />
     </div>
   )
 }
