@@ -15,7 +15,7 @@ export class TrackList extends Component {
 
     render() {
         return (
-            <div className='track-hub'>
+            <div className='track-list'>
                 <MasterTrack />
                 
                 {this.state.tracks.map((file,i) => <Track key={`${file.name}${i}`} title={file.name} songFile={file}/>)}

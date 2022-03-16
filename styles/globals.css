@@ -37,7 +37,8 @@ body {
   background: var(--light-lblue);
   overflow-y: scroll;
   display: flex;
-  min-height: 90.63vh;
+  min-height: 93.5vh;
+  
 }
 
 .header {
@@ -56,7 +57,7 @@ body {
 
 /* Tracks */
 
-.track-hub {
+.track-list {
   background-color: var(--light-dpurp);
   display: flex;
   padding-top: 4%;
@@ -65,7 +66,7 @@ body {
   height: 100%;
 }
 
-.track-hub .add-track-button {
+.track-list .add-track-button {
   color: var(--light-mdpurp);
   width: auto;
   cursor: pointer;

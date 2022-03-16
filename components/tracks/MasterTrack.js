@@ -12,11 +12,7 @@ function MasterTrack({title}) {
   const toggleTrack = () => {
     const statusPlaying = isPlaying;
     setIsPlaying(!statusPlaying);
-    if (!statusPlaying) {
-      audioPlayer.current.play();
-    } else {
-      audioPlayer.current.pause();
-    }
+    
   }
 
   return (
